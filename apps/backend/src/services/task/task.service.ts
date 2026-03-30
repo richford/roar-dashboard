@@ -1,10 +1,5 @@
-<<<<<<< enh/1681/progress-optional-status
 import type { NewTaskVariant, NewTaskVariantParameter, Task, TaskVariant } from '../../db/schema';
-import type { TaskVariantStatus } from '../../enums/task-variant-status.enum';
-=======
-import type { NewTaskVariant, NewTaskVariantParameter, User, Task, TaskVariant } from '../../db/schema';
 import { TaskVariantStatus } from '../../enums/task-variant-status.enum';
->>>>>>> enh/1681/progress-students-backend
 import type { AuthContext } from '../../types/auth-context';
 import type { PaginatedResult } from '../../repositories/base.repository';
 import { StatusCodes } from 'http-status-codes';
@@ -17,18 +12,9 @@ import { ApiErrorCode } from '../../enums/api-error-code.enum';
 import { ApiErrorMessage } from '../../enums/api-error-message.enum';
 import { isUniqueViolation, unwrapDrizzleError } from '../../errors';
 import { getGradeAsNumber } from '../../utils/get-grade-as-number.util';
-<<<<<<< enh/1681/progress-optional-status
-import {
-  Operator,
-  type Condition,
-  type ConditionEvaluationUser,
-  type FieldCondition,
-  type CompositeCondition,
-} from './task.types';
-=======
 import { isValidUuid } from '../../utils/is-valid-uuid.util';
-import { Operator, type Condition, type FieldCondition, type CompositeCondition } from './task.types';
->>>>>>> enh/1681/progress-students-backend
+import type { Condition, ConditionEvaluationUser, FieldCondition, CompositeCondition } from './task.types';
+import { Operator } from './task.types';
 
 /**
  * Parameter data for creating task variant parameters.
